@@ -137,6 +137,61 @@
     color: var(--navy);
   }
   .product-card .product-text p { margin: 0; }
+  .feature-intro { margin-bottom: 20px; }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .feature {
+    background: var(--bg);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .feature .icon { font-size: 1.4rem; line-height: 1; margin-bottom: 6px; display: block; }
+  .feature h3 {
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+    color: var(--navy);
+  }
+  .feature p { margin: 0; font-size: 0.85rem; color: #475569; }
+  .plan-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+  }
+  .plan-chip {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: rgba(14, 124, 116, 0.1);
+    color: var(--teal);
+  }
+  .plan-chip.silver { background: rgba(100, 116, 139, 0.14); color: #475569; }
+  .plan-chip.gold { background: rgba(245, 96, 42, 0.12); color: var(--orange-text); }
+  .store-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .store-row a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: var(--navy);
+    color: #fff;
+    font-size: 0.85rem;
+  }
+  .store-row a:hover { text-decoration: none; opacity: 0.9; }
+  @media (max-width: 480px) {
+    .feature-grid { grid-template-columns: 1fr; }
+  }
   .meta-grid { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: 0.95rem; }
   .meta-grid dt { font-weight: 700; color: var(--navy); }
   .meta-grid dd { margin: 0; color: #334155; }
@@ -158,14 +213,67 @@
   <main>
     <section>
       <h2>Our Product</h2>
-      <div class="product-card">
+      <div class="product-card feature-intro">
         <img src="qariibo-icon.png" alt="Qariibo app icon" width="64" height="64">
         <div class="product-text">
           <h3>Qariibo</h3>
           <p>Connects local businesses with nearby customers — discover deals, products and
-          services. Available on iOS, Android and the web at
+          services, right where you are, at
           <a href="https://qariibo.com" target="_blank" rel="noopener">qariibo.com</a>.</p>
         </div>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="icon">🔎</span>
+          <h3>Discover nearby</h3>
+          <p>Search and browse businesses, deals, products and services around you.</p>
+        </div>
+        <div class="feature">
+          <span class="icon">🏷️</span>
+          <h3>Deals &amp; offers</h3>
+          <p>Businesses publish time-limited offers; customers find and share them easily.</p>
+        </div>
+        <div class="feature">
+          <span class="icon">🛍️</span>
+          <h3>Products &amp; services</h3>
+          <p>A searchable catalog of what each business sells or provides, always up to date.</p>
+        </div>
+        <div class="feature">
+          <span class="icon">🎁</span>
+          <h3>Reward programs</h3>
+          <p>Stamp- and spend-based loyalty cards that bring customers back, scanned in person.</p>
+        </div>
+        <div class="feature">
+          <span class="icon">📊</span>
+          <h3>Business analytics</h3>
+          <p>Visitor counts, trends, repeat-customer and geographic insights for every business.</p>
+        </div>
+        <div class="feature">
+          <span class="icon">🖥️</span>
+          <h3>Digital display boards</h3>
+          <p>Businesses design and run their own offers and products on in-store screens.</p>
+        </div>
+        <div class="feature">
+          <span class="icon">✅</span>
+          <h3>Verified businesses</h3>
+          <p>Phone and business verification build trust before an offer is published.</p>
+        </div>
+        <div class="feature">
+          <span class="icon">🌍</span>
+          <h3>Available everywhere</h3>
+          <p>Native apps for iOS and Android, plus the web — in English, Arabic and German.</p>
+        </div>
+      </div>
+
+      <div class="plan-row">
+        <span class="plan-chip">Free</span>
+        <span class="plan-chip silver">Silver</span>
+        <span class="plan-chip gold">Gold</span>
+      </div>
+
+      <div class="store-row">
+        <a href="https://qariibo.com" target="_blank" rel="noopener">Open qariibo.com &rarr;</a>
       </div>
     </section>
 
